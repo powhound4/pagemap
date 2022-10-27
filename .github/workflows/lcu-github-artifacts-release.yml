@@ -1,0 +1,18 @@
+name: GitHub Artifacts - Release
+
+on:
+  push:
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions: write-all
+
+env:
+  CI: false
+  Branches: master
+  MainBranch: master
+  NPMRegistry: https://registry.npmjs.org/
+  InstallCommand: npm ci
+  BuildCommand: npm run build
+  Output: ./_site
